@@ -21,7 +21,7 @@ use ReturnTypeWillChange;
  */
 class ArrayHandler extends BaseHandler
 {
-    protected static $cache = [];
+    protected static array $cache = [];
 
     /**
      * Re-initialize existing session, or creates a new one.

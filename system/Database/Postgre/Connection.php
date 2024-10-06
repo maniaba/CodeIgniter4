@@ -50,10 +50,22 @@ class Connection extends BaseConnection
      */
     public $escapeChar = '"';
 
-    protected $connect_timeout;
-    protected $options;
-    protected $sslmode;
-    protected $service;
+    /**
+     * @var int Connection timeout in seconds
+     */
+    protected int $connect_timeout;
+
+    /**
+     * @var string Connection options
+     */
+    protected string $options;
+
+    /**
+     * @var string Possible values are: disable, allow, prefer, require, verify-ca, verify-full
+     */
+    protected string $sslmode;
+
+    protected string $service;
 
     /**
      * Connect to the database.
@@ -546,7 +558,11 @@ class Connection extends BaseConnection
         // provided via string> Example:
         //
         // Postgre://username:password@localhost:5432/database?connect_timeout=5&sslmode=1
-        foreach (['connect_timeout', 'options', 'sslmode', 'service'] as $key) {
+        if (isset($this->connect_timeout)) {
+            $this->DSN .= "connect_timeout={$this->connect_timeout} ";
+        }
+
+        foreach (['options', 'sslmode', 'service'] as $key) {
             if (isset($this->{$key}) && is_string($this->{$key}) && $this->{$key} !== '') {
                 $this->DSN .= "{$key}='{$this->{$key}}' ";
             }
