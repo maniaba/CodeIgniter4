@@ -3087,12 +3087,6 @@ $ignoreErrors[] = [
 ];
 $ignoreErrors[] = [
 	// identifier: missingType.property
-	'message' => '#^Property CodeIgniter\\\\Database\\\\OCI8\\\\Connection\\:\\:\\$resetStmtId has no type specified\\.$#',
-	'count' => 1,
-	'path' => __DIR__ . '/system/Database/OCI8/Connection.php',
-];
-$ignoreErrors[] = [
-	// identifier: missingType.property
 	'message' => '#^Property CodeIgniter\\\\Database\\\\OCI8\\\\Connection\\:\\:\\$validDSNs has no type specified\\.$#',
 	'count' => 1,
 	'path' => __DIR__ . '/system/Database/OCI8/Connection.php',

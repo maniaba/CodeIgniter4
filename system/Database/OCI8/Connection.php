@@ -79,7 +79,7 @@ class Connection extends BaseConnection
      * Used by storedProcedure() to prevent execute() from
      * re-setting the statement ID.
      */
-    protected $resetStmtId = true;
+    protected bool $resetStmtId = true;
 
     /**
      * Statement ID
