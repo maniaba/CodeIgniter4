@@ -24,10 +24,10 @@ use CodeIgniter\HTTP\CURLRequest;
  */
 class MockCURLRequest extends CURLRequest
 {
-    public $curl_options;
-    protected $output = '';
+    public array $curl_options;
+    protected string $output = '';
 
-    public function setOutput($output)
+    public function setOutput(string $output): static
     {
         $this->output = $output;
 

@@ -3086,18 +3086,6 @@ $ignoreErrors[] = [
 	'path' => __DIR__ . '/system/Database/OCI8/Connection.php',
 ];
 $ignoreErrors[] = [
-	// identifier: missingType.property
-	'message' => '#^Property CodeIgniter\\\\Database\\\\OCI8\\\\Connection\\:\\:\\$resetStmtId has no type specified\\.$#',
-	'count' => 1,
-	'path' => __DIR__ . '/system/Database/OCI8/Connection.php',
-];
-$ignoreErrors[] = [
-	// identifier: missingType.property
-	'message' => '#^Property CodeIgniter\\\\Database\\\\OCI8\\\\Connection\\:\\:\\$validDSNs has no type specified\\.$#',
-	'count' => 1,
-	'path' => __DIR__ . '/system/Database/OCI8/Connection.php',
-];
-$ignoreErrors[] = [
 	// identifier: method.childReturnType
 	'message' => '#^Return type \\(array\\{code\\: int\\|string\\|null, message\\: string\\|null\\}\\) of method CodeIgniter\\\\Database\\\\OCI8\\\\Connection\\:\\:error\\(\\) should be covariant with return type \\(array\\<string, int\\|string\\>\\) of method CodeIgniter\\\\Database\\\\ConnectionInterface\\<resource,resource\\>\\:\\:error\\(\\)$#',
 	'count' => 1,
@@ -3322,30 +3310,6 @@ $ignoreErrors[] = [
 $ignoreErrors[] = [
 	// identifier: property.phpDocType
 	'message' => '#^PHPDoc type string of property CodeIgniter\\\\Database\\\\Postgre\\\\Connection\\:\\:\\$escapeChar is not the same as PHPDoc type array\\|string of overridden property CodeIgniter\\\\Database\\\\BaseConnection\\<PgSql\\\\Connection,PgSql\\\\Result\\>\\:\\:\\$escapeChar\\.$#',
-	'count' => 1,
-	'path' => __DIR__ . '/system/Database/Postgre/Connection.php',
-];
-$ignoreErrors[] = [
-	// identifier: missingType.property
-	'message' => '#^Property CodeIgniter\\\\Database\\\\Postgre\\\\Connection\\:\\:\\$connect_timeout has no type specified\\.$#',
-	'count' => 1,
-	'path' => __DIR__ . '/system/Database/Postgre/Connection.php',
-];
-$ignoreErrors[] = [
-	// identifier: missingType.property
-	'message' => '#^Property CodeIgniter\\\\Database\\\\Postgre\\\\Connection\\:\\:\\$options has no type specified\\.$#',
-	'count' => 1,
-	'path' => __DIR__ . '/system/Database/Postgre/Connection.php',
-];
-$ignoreErrors[] = [
-	// identifier: missingType.property
-	'message' => '#^Property CodeIgniter\\\\Database\\\\Postgre\\\\Connection\\:\\:\\$service has no type specified\\.$#',
-	'count' => 1,
-	'path' => __DIR__ . '/system/Database/Postgre/Connection.php',
-];
-$ignoreErrors[] = [
-	// identifier: missingType.property
-	'message' => '#^Property CodeIgniter\\\\Database\\\\Postgre\\\\Connection\\:\\:\\$sslmode has no type specified\\.$#',
 	'count' => 1,
 	'path' => __DIR__ . '/system/Database/Postgre/Connection.php',
 ];
@@ -9464,12 +9428,6 @@ $ignoreErrors[] = [
 	'path' => __DIR__ . '/system/Test/Mock/MockBuilder.php',
 ];
 $ignoreErrors[] = [
-	// identifier: missingType.property
-	'message' => '#^Property CodeIgniter\\\\Test\\\\Mock\\\\MockCLIConfig\\:\\:\\$CSRFExcludeURIs has no type specified\\.$#',
-	'count' => 1,
-	'path' => __DIR__ . '/system/Test/Mock/MockCLIConfig.php',
-];
-$ignoreErrors[] = [
 	// identifier: missingType.return
 	'message' => '#^Method CodeIgniter\\\\Test\\\\Mock\\\\MockCURLRequest\\:\\:getBaseURI\\(\\) has no return type specified\\.$#',
 	'count' => 1,
@@ -9490,24 +9448,6 @@ $ignoreErrors[] = [
 $ignoreErrors[] = [
 	// identifier: missingType.return
 	'message' => '#^Method CodeIgniter\\\\Test\\\\Mock\\\\MockCURLRequest\\:\\:setOutput\\(\\) has no return type specified\\.$#',
-	'count' => 1,
-	'path' => __DIR__ . '/system/Test/Mock/MockCURLRequest.php',
-];
-$ignoreErrors[] = [
-	// identifier: missingType.parameter
-	'message' => '#^Method CodeIgniter\\\\Test\\\\Mock\\\\MockCURLRequest\\:\\:setOutput\\(\\) has parameter \\$output with no type specified\\.$#',
-	'count' => 1,
-	'path' => __DIR__ . '/system/Test/Mock/MockCURLRequest.php',
-];
-$ignoreErrors[] = [
-	// identifier: missingType.property
-	'message' => '#^Property CodeIgniter\\\\Test\\\\Mock\\\\MockCURLRequest\\:\\:\\$curl_options has no type specified\\.$#',
-	'count' => 1,
-	'path' => __DIR__ . '/system/Test/Mock/MockCURLRequest.php',
-];
-$ignoreErrors[] = [
-	// identifier: missingType.property
-	'message' => '#^Property CodeIgniter\\\\Test\\\\Mock\\\\MockCURLRequest\\:\\:\\$output has no type specified\\.$#',
 	'count' => 1,
 	'path' => __DIR__ . '/system/Test/Mock/MockCURLRequest.php',
 ];

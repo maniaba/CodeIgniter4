@@ -52,7 +52,12 @@ class Connection extends BaseConnection
         'rownum',
     ];
 
-    protected $validDSNs = [
+    /**
+     * Array of valid DSN patterns for different Oracle connections.
+     *
+     * @var array{tns: string,ec: string,in: string}
+     */
+    protected array $validDSNs = [
         // TNS
         'tns' => '/^\(DESCRIPTION=(\(.+\)){2,}\)$/',
         // Easy Connect string (Oracle 10g+).
@@ -79,7 +84,7 @@ class Connection extends BaseConnection
      * Used by storedProcedure() to prevent execute() from
      * re-setting the statement ID.
      */
-    protected $resetStmtId = true;
+    protected bool $resetStmtId = true;
 
     /**
      * Statement ID
