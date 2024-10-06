@@ -22,6 +22,9 @@ Message Changes
 Changes
 *******
 
+- **Validation:** Rule ``is_unique`` and ``is_not_unique`` now accept an optional
+ ``dbGroup`` as parameter.
+
 ************
 Deprecations
 ************
