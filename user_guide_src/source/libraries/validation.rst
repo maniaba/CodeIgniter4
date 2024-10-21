@@ -886,13 +886,6 @@ Available Rules
 .. note:: Rule is a string; there must be **no spaces** between the parameters, especially the ``is_unique`` rule.
     There can be no spaces before and after ``ignore_value``.
 
-.. note:: Since version v4.6.0, you can optionally include ``dbGroup`` in validation rules like ``is_unique`` and ``is_not_unique``.
-    This allows specifying which database connection to use during validation, giving you more flexibility when working with multiple databases.
-    To use ``dbGroup``, you place it before the table name in the validation rule, like this:
-    ``is_unique[dbGroup.table.field,ignore_field,ignore_value]`` or ``is_not_unique[dbGroup.table.field,where_field,where_value]``.
-    In these examples, ``dbGroup`` is used to select the appropriate database connection for the specified table and field.
-    If ``dbGroup`` is not provided, the default database group will be used.
-
 .. literalinclude:: validation/038.php
    :lines: 2-
 
