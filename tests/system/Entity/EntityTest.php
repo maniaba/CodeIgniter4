@@ -35,6 +35,7 @@ use Tests\Support\Entity\Cast\CastPassParameters;
 use Tests\Support\Entity\Cast\NotExtendsBaseCast;
 use Tests\Support\Enum\ColorEnum;
 use Tests\Support\Enum\RoleEnum;
+use Tests\Support\Enum\StateEnum;
 use Tests\Support\Enum\StatusEnum;
 use Tests\Support\SomeEntity;
 
@@ -1043,6 +1044,19 @@ final class EntityTest extends CIUnitTestCase
         // Should return the enum object when accessed
         $this->assertInstanceOf(ColorEnum::class, $entity->color);
         $this->assertSame(ColorEnum::RED, $entity->color);
+    }
+
+    public function testInjectRawDataWithEnumThatHasToArrayMethod(): void
+    {
+        // Regression test for https://github.com/codeigniter4/CodeIgniter4/issues/10136
+        // Enums implementing toArray() must still be handled by the UnitEnum branch.
+        $entity = new class () extends Entity {};
+
+        $entity->injectRawData(['state' => StateEnum::DRAFT]);
+
+        // Enum value should be preserved, not expanded via toArray()
+        $this->assertSame(['state' => 'draft'], $entity->toRawArray());
+        $this->assertFalse($entity->hasChanged('state'));
     }
 
     public function testAsArray(): void
