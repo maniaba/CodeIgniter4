@@ -13,10 +13,6 @@ declare(strict_types=1);
 
 namespace Tests\Support\Enum;
 
-/**
- * An enum that also defines toArray(), used to test that UnitEnum handling
- * takes precedence over toArray() in Entity::normalizeValue().
- */
 enum StateEnum: string
 {
     case DRAFT     = 'draft';
@@ -24,6 +20,6 @@ enum StateEnum: string
 
     public function toArray(): array
     {
-        return array_column(self::cases(), 'value');
+        return self::cases();
     }
 }
